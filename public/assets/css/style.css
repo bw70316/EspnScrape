@@ -5,7 +5,7 @@ html {
 
 body {
   margin-bottom: 80px;
-  background-image: url("../images/paper.png");
+/*  background-image: url("../images/nfl.jpg");*/
 }
 
 .footer {
@@ -28,6 +28,7 @@ body {
   padding: 0;
   font-family: "Cormorant SC";
   box-shadow: 10px 5px 20px 2px lightslategrey;
+
 }
 
 .jumbotron .overlay {
@@ -43,7 +44,7 @@ body {
 
 .jumbotron .background-image {
   height: 100%;
-  background-image: url("../images/newspaper.jpg");
+  background-image: url("../images/nfl.jpg");
   background-size: cover;
 }
 
@@ -78,7 +79,7 @@ body {
 }
 
 .panel.panel-default .panel-heading h3 {
-  color: white;
+  color: darkgreen;
 }
 
 .panel.panel-default .panel-heading .btn {
@@ -86,6 +87,15 @@ body {
   margin-right: 5px;
   margin-bottom: 50px;
   margin-left: 5px;
+}
+
+#button {
+  background: mediumseagreen;
+  margin-left: 15px;
+  color: #4b1717;
+  border-style: groove;
+  border-color: #4b1717;
+  border-radius: 15px;
 }
 
 .panel.panel-default .panel-body {
@@ -98,11 +108,19 @@ body {
   bottom: 0;
   left: 0;
   padding: 5px;
+  font-size: 18px;
+  text-align: center;
   padding-bottom: 5px;
   padding-left: 10px;
   margin: 0;
   font-weight: 800;
   background: #0c7cd5;
+  color: darkgreen;
+}
+
+#left-head {
+  background: #4b1717;
+  border-style: groove;
 }
 
 .navbar-nav > li > a.scrape-new {
@@ -118,6 +136,11 @@ body {
 
 .navbar-nav > li > a.scrape-new:active {
   background: #e51c23;
+}
+
+.active {
+   font-weight: bold;
+   font-size: 18px;
 }
 
 .scrape-new {
