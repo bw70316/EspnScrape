@@ -9,7 +9,7 @@ var cheerio = require("cheerio");
 var scrape = function(cb) {
 
   // Use the request package to take in the body of the page's html
-  request("http://www.espn.com/", function(err, response, body) {
+  request("http://thehuddle.com/fantasy_football_news.php", function(err, response, body) {
     // body is the actual HTML on the page. Load this into cheerio
 
     // Saving this to $ creates a virtual HTML page we can minipulate and
@@ -20,7 +20,8 @@ var scrape = function(cb) {
 
     // Make an empty array to save our article info
     var articles = [];
-$(".contentItem__contentWrapper").each(function(i, element) {
+
+$("li").each(function(i, element) {
     // Now, find and loop through each element that has the "theme-summary" class
     // (i.e, the section holding the articles)
   
@@ -28,11 +29,11 @@ $(".contentItem__contentWrapper").each(function(i, element) {
       // In each .theme-summary, we grab the child with the class story-heading
       // Then we grab the inner text of the this element and store it
       // to the head variable. This is the article headline
-      var head = $(this).children(".contentItem__title contentItem__title--story").text().trim();
+      var head = $(this).children("h5").text().trim();
 
       // Then we grab any children with the class of summary and then grab it's inner text
       // We store this to the sum variable. This is the article summary
-      var sum = $(this).children(".contentItem__subhead contentItem__subhead--story").text().trim();
+      var sum = $(this).children("p").text().trim();
 
       // So long as our headline and sum aren't empty or undefined, do the following
       if (head && sum) {

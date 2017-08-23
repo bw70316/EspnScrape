@@ -35,6 +35,7 @@ app.use(bodyParser.urlencoded({
 // Have every request go through our router middleware
 app.use(router);
 
+// mongoose.connect("MONGODB_URI: mongodb://heroku_8lmgrkhq:4br571cn94te9n2datdp1f60gl@ds023463.mlab.com:23463/heroku_8lmgrkhq")
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
 var db = process.env.MONGODB_URI || "mongodb://localhost/espnScrape";
